@@ -1,4 +1,6 @@
 export const optional = (value: any) => {
+  console.log(`optional, value type: ${typeof value}`)
+
   const isPresent = () => {
     return !(value === undefined || value === null)
   }
@@ -15,26 +17,19 @@ export const optional = (value: any) => {
   }
 
   const map = (key: string) => {
-    if (!isPresent()) {
+    if (value === undefined) {
       return optional(undefined)
     }
 
-    console.log('value: ', value)
-        
-    if (value.hasOwnProperty(key)) {
-      console.log('key: ', key, value[key])
-      return optional(value[key])
-    }
-
-    return optional(undefined)
+    return optional(value[key])
   }
 
   const isNumeric = () => {
-    if (typeof value === "number") {
+    if (typeof value === 'number') {
       return true
     }
 
-    if (typeof value != "string") return false
+    if (typeof value != 'string') return false
 
     return !isNaN(parseInt(value)) && !isNaN(parseFloat(value))
   }
@@ -46,76 +41,40 @@ export const optional = (value: any) => {
   const isEmpty = () => {
     if (!isPresent()) return true
 
-    if (typeof value === "number") {
+    if (typeof value === 'number') {
       return value === 0
     }
 
-    if (typeof value === "string") return value.trim().length === 0
+    if (typeof value === 'string') return value.trim().length === 0
 
     if (Array.isArray(value)) {
       return value.length === 0
     }
 
-    if (typeof value === "object") return Object.keys(value).length === 0
-
-    return false
+    if (typeof value === 'object') return Object.keys(value).length === 0
   }
 
   const ifPresent = (fn: (value: any) => any) => {
     if (isPresent()) {
       return fn(value)
     }
+
+    return null
   }
 
   const ifFail = (fn: (value: any) => void) => {
     if (!isPresent()) {
       return fn(value)
     }
+
+    return null
   }
 
   const ifPresentOrElse = (
     fn: ((value: any) => void) | undefined,
-    fn2: ((value: any) => void) | undefined,
+    fn2: ((value: any) => void) | undefined
   ): any => {
     if (isPresent()) {
-      if (fn === undefined) {
-        return null
-      }
-
-      return fn(value)
-    }
-
-    if (fn2 === undefined) {
-      return null
-    }
-
-    return fn2(value)
-  }
-
-  const ifEmptyOrElse = (
-    fn: ((value: any) => void) | undefined,
-    fn2: ((value: any) => void) | undefined,
-  ): any => {
-    if (isEmpty()) {
-      if (fn === undefined) {
-        return null
-      }
-
-      return fn(value)
-    }
-
-    if (fn2 === undefined) {
-      return null
-    }
-
-    return fn2(value)
-  }
-
-  const ifNotEmptyOrElse = (
-    fn: ((value: any) => void) | undefined,
-    fn2: ((value: any) => void) | undefined,
-  ): any => {
-    if (!isEmpty()) {
       if (fn === undefined) {
         return null
       }
@@ -160,7 +119,7 @@ export const optional = (value: any) => {
 
   const ifArrayNotEmptyOrElse = (
     fn: (data: any) => any,
-    fn2: (data: any) => any,
+    fn2: (data: any) => any
   ) => {
     if (!isPresent()) {
       return fn2(value)
@@ -211,7 +170,7 @@ export const optional = (value: any) => {
 
   const ifNumberNotZeroOrElse = (
     fn: (data: any) => any,
-    fn2: (data: any) => any,
+    fn2: (data: any) => any
   ) => {
     if (!isPresent()) {
       return fn2(value)
@@ -240,6 +199,42 @@ export const optional = (value: any) => {
     return value
   }
 
+  const ifIsTrue = (fn: (data: any) => any) => {
+    if (!isPresent()) {
+      return value
+    }
+
+    if (isEmpty()) {
+      return false
+    }
+
+    if (fn === undefined) {
+      return value
+    }
+
+    if (typeof value === 'boolean' && value === true) {
+      return fn(value)
+    }
+
+    return false
+  }
+
+  const isNotFalse = (): boolean => {
+    if (!isEmpty() && typeof value === 'boolean' && value === false) {
+      return false
+    }
+
+    return true
+  }
+
+  const ifNotFalse = (fn: (data: any) => any) => {
+    if (isNotFalse()) {
+      return fn(value)
+    }
+
+    return false
+  }
+
   return {
     isPresent: isPresent,
     get: get,
@@ -255,10 +250,11 @@ export const optional = (value: any) => {
     isEmpty: isEmpty,
     ifFail: ifFail,
     ifPresentOrElse: ifPresentOrElse,
-    ifEmptyOrElse: ifEmptyOrElse,
     ifArrayNotEmpty: ifArrayNotEmpty,
     ifArrayNotEmptyOrElse: ifArrayNotEmptyOrElse,
     ifNotEmpty: ifNotEmpty,
-    ifNotEmptyOrElse: ifNotEmptyOrElse,
+    ifIsTrue: ifIsTrue,
+    isNotFalse: isNotFalse,
+    ifNotFalse: ifNotFalse,
   }
 }
