@@ -4,23 +4,9 @@
 
 ## Table of contents
 
-### Variables
-
-- [default](modules.md#default)
-
 ### Functions
 
 - [optional](modules.md#optional)
-
-## Variables
-
-### default
-
-• **default**: `Object`
-
-#### Defined in
-
-index.ts:3
 
 ## Functions
 
