@@ -1,4 +1,4 @@
-laxinba-app-lib / [Exports](modules.md)
+osins-utils / [Exports](modules.md)
 
 ### laxinba-app-lib 说明
 

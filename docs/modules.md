@@ -1,39 +1,66 @@
-[laxinba-app-lib](README.md) / Exports
+[osins-utils](README.md) / Exports
 
-# laxinba-app-lib
+# osins-utils
 
 ## Table of contents
 
-### Namespaces
-
-- [constant](modules/constant.md)
-- [entity](modules/entity.md)
-- [oss](modules/oss.md)
-- [types](modules/types.md)
-- [utils](modules/utils.md)
-
-### Functions
+### Variables
 
 - [default](modules.md#default)
 
-## Functions
+### Functions
+
+- [optional](modules.md#optional)
+
+## Variables
 
 ### default
 
-▸ **default**(`config`): [`LxbAppLibType`](interfaces/types.base.LxbAppLibType.md) \| ``null``
-
-初始化拉新吧依赖库的入口方法
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `config` | `LxbAppLibConfig` | 库依赖所需要的配置，uni和plus为uniapp中的全局对象，请在调用前传入，否则会报错 |
-
-#### Returns
-
-[`LxbAppLibType`](interfaces/types.base.LxbAppLibType.md) \| ``null``
+• **default**: `Object`
 
 #### Defined in
 
-index.ts:34
+index.ts:3
+
+## Functions
+
+### optional
+
+▸ **optional**(`value`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `any` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `arrayIsEmpty` | () => `boolean` |
+| `get` | () => `any` |
+| `ifArrayNotEmpty` | (`fn`: (`data`: `any`) => `any`) => `any` |
+| `ifArrayNotEmptyOrElse` | (`fn`: (`data`: `any`) => `any`, `fn2`: (`data`: `any`) => `any`) => `any` |
+| `ifFail` | (`fn`: (`value`: `any`) => `void`) => ``null`` \| `void` |
+| `ifIsTrue` | (`fn`: (`data`: `any`) => `any`) => `any` |
+| `ifNotEmpty` | (`fn`: (`data`: `any`) => `any`) => `any` |
+| `ifNotFalse` | (`fn`: (`data`: `any`) => `any`) => `any` |
+| `ifNumberNotZero` | (`fn`: (`data`: `any`) => `any`) => `any` |
+| `ifNumberNotZeroOrElse` | (`fn`: (`data`: `any`) => `any`, `fn2`: (`data`: `any`) => `any`) => `any` |
+| `ifPresent` | (`fn`: (`value`: `any`) => `any`) => `any` |
+| `ifPresentOrElse` | (`fn`: `undefined` \| (`value`: `any`) => `void`, `fn2`: `undefined` \| (`value`: `any`) => `void`) => `any` |
+| `isEmpty` | () => `undefined` \| `boolean` |
+| `isNotFalse` | () => `boolean` |
+| `isNumeric` | () => `boolean` |
+| `isPresent` | () => `boolean` |
+| `map` | (`key`: `string`) => { isPresent: () =\> boolean; get: () =\> any; orElse: (elseValue: any) =\> any; map: (key: string) =\> ...; isNumeric: () =\> boolean; numberValue: () =\> number; numberNotZero: () =\> boolean; arrayIsEmpty: () =\> boolean; ... 11 more ...; ifNotFalse: (fn: (data: any) =\> any) =\> any; } |
+| `numberNotZero` | () => `boolean` |
+| `numberValue` | () => `number` |
+| `orElse` | (`elseValue`: `any`) => `any` |
+
+#### Defined in
+
+optional.ts:1
