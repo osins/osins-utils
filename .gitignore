@@ -67,6 +67,10 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+<<<<<<< HEAD
+=======
+.yarn
+>>>>>>> 5c19769 (update)
 
 # dotenv environment variables file
 .env
@@ -101,4 +105,8 @@ dist
 .dynamodb/
 
 # TernJS port file
+<<<<<<< HEAD
 .tern-port
+=======
+.tern-port
+>>>>>>> 5c19769 (update)
