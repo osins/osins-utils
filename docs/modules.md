@@ -4,6 +4,10 @@
 
 ## Table of contents
 
+### Interfaces
+
+- [OptionalType](interfaces/OptionalType.md)
+
 ### Functions
 
 - [optional](modules.md#optional)
@@ -12,7 +16,13 @@
 
 ### optional
 
-▸ **optional**(`value`): `Object`
+▸ **optional**<`T`\>(`value`): [`OptionalType`](interfaces/OptionalType.md)<`T`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
 
 #### Parameters
 
@@ -22,31 +32,8 @@
 
 #### Returns
 
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `arrayIsEmpty` | () => `boolean` |
-| `get` | () => `any` |
-| `ifArrayNotEmpty` | (`fn`: (`data`: `any`) => `any`) => `any` |
-| `ifArrayNotEmptyOrElse` | (`fn`: (`data`: `any`) => `any`, `fn2`: (`data`: `any`) => `any`) => `any` |
-| `ifFail` | (`fn`: (`value`: `any`) => `void`) => ``null`` \| `void` |
-| `ifIsTrue` | (`fn`: (`data`: `any`) => `any`) => `any` |
-| `ifNotEmpty` | (`fn`: (`data`: `any`) => `any`) => `any` |
-| `ifNotFalse` | (`fn`: (`data`: `any`) => `any`) => `any` |
-| `ifNumberNotZero` | (`fn`: (`data`: `any`) => `any`) => `any` |
-| `ifNumberNotZeroOrElse` | (`fn`: (`data`: `any`) => `any`, `fn2`: (`data`: `any`) => `any`) => `any` |
-| `ifPresent` | (`fn`: (`value`: `any`) => `any`) => `any` |
-| `ifPresentOrElse` | (`fn`: `undefined` \| (`value`: `any`) => `void`, `fn2`: `undefined` \| (`value`: `any`) => `void`) => `any` |
-| `isEmpty` | () => `undefined` \| `boolean` |
-| `isNotFalse` | () => `boolean` |
-| `isNumeric` | () => `boolean` |
-| `isPresent` | () => `boolean` |
-| `map` | (`key`: `string`) => { isPresent: () =\> boolean; get: () =\> any; orElse: (elseValue: any) =\> any; map: (key: string) =\> ...; isNumeric: () =\> boolean; numberValue: () =\> number; numberNotZero: () =\> boolean; arrayIsEmpty: () =\> boolean; ... 11 more ...; ifNotFalse: (fn: (data: any) =\> any) =\> any; } |
-| `numberNotZero` | () => `boolean` |
-| `numberValue` | () => `number` |
-| `orElse` | (`elseValue`: `any`) => `any` |
+[`OptionalType`](interfaces/OptionalType.md)<`T`\>
 
 #### Defined in
 
-optional.ts:1
+[optional.ts:27](https://github.com/osins/osins-utils/blob/b357f8e/src/optional.ts#L27)
