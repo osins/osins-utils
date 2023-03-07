@@ -1,6 +1,6 @@
 {
   "name": "osins-utils",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "description": "osins uitls",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,6 +28,7 @@
   "author": "richard",
   "license": "ISC",
   "dependencies": {
+    "@types/express": "^4.17.17",
     "crypto-js": "^4.1.1"
   },
   "devDependencies": {

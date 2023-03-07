@@ -779,12 +779,27 @@
   resolved "https://mirrors.cloud.tencent.com/npm/@tootallnate/once/-/once-1.1.2.tgz"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
 
+"@types/body-parser@*":
+  version "1.19.2"
+  resolved "https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.2.tgz"
+  integrity sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==
+  dependencies:
+    "@types/connect" "*"
+    "@types/node" "*"
+
 "@types/buble@^0.19.2":
   version "0.19.2"
   resolved "https://mirrors.cloud.tencent.com/npm/@types/buble/-/buble-0.19.2.tgz"
   integrity sha512-uUD8zIfXMKThmFkahTXDGI3CthFH1kMg2dOm3KLi4GlC5cbARA64bEcUMbbWdWdE73eoc/iBB9PiTMqH0dNS2Q==
   dependencies:
     magic-string "^0.25.0"
+
+"@types/connect@*":
+  version "3.4.35"
+  resolved "https://registry.npmjs.org/@types/connect/-/connect-3.4.35.tgz"
+  integrity sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==
+  dependencies:
+    "@types/node" "*"
 
 "@types/crypto-js@^4.1.1":
   version "4.1.1"
@@ -795,6 +810,25 @@
   version "1.0.0"
   resolved "https://mirrors.cloud.tencent.com/npm/@types/estree/-/estree-1.0.0.tgz"
   integrity sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==
+
+"@types/express-serve-static-core@^4.17.33":
+  version "4.17.33"
+  resolved "https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.17.33.tgz"
+  integrity sha512-TPBqmR/HRYI3eC2E5hmiivIzv+bidAfXofM+sbonAGvyDhySGw9/PQZFt2BLOrjUUR++4eJVpx6KnLQK1Fk9tA==
+  dependencies:
+    "@types/node" "*"
+    "@types/qs" "*"
+    "@types/range-parser" "*"
+
+"@types/express@^4.17.17":
+  version "4.17.17"
+  resolved "https://registry.npmjs.org/@types/express/-/express-4.17.17.tgz"
+  integrity sha512-Q4FmmuLGBG58btUnfS1c1r/NQdlp3DMfGDGig8WhfpA2YRUtEkxAjkZb0yvplJGYdF1fsQ81iMDcH24sSCNC/Q==
+  dependencies:
+    "@types/body-parser" "*"
+    "@types/express-serve-static-core" "^4.17.33"
+    "@types/qs" "*"
+    "@types/serve-static" "*"
 
 "@types/fs-extra@^9.0.13":
   version "9.0.13"
@@ -821,6 +855,11 @@
   resolved "https://mirrors.cloud.tencent.com/npm/@types/json5/-/json5-0.0.29.tgz"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
+"@types/mime@*":
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/@types/mime/-/mime-3.0.1.tgz"
+  integrity sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==
+
 "@types/minimatch@^3.0.3", "@types/minimatch@^3.0.4":
   version "3.0.5"
   resolved "https://mirrors.cloud.tencent.com/npm/@types/minimatch/-/minimatch-3.0.5.tgz"
@@ -841,6 +880,16 @@
   resolved "https://mirrors.cloud.tencent.com/npm/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz"
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
 
+"@types/qs@*":
+  version "6.9.7"
+  resolved "https://registry.npmjs.org/@types/qs/-/qs-6.9.7.tgz"
+  integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
+
+"@types/range-parser@*":
+  version "1.2.4"
+  resolved "https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.4.tgz"
+  integrity sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==
+
 "@types/resolve@1.20.2":
   version "1.20.2"
   resolved "https://mirrors.cloud.tencent.com/npm/@types/resolve/-/resolve-1.20.2.tgz"
@@ -858,6 +907,14 @@
   version "7.3.13"
   resolved "https://mirrors.cloud.tencent.com/npm/@types/semver/-/semver-7.3.13.tgz"
   integrity sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==
+
+"@types/serve-static@*":
+  version "1.15.1"
+  resolved "https://registry.npmjs.org/@types/serve-static/-/serve-static-1.15.1.tgz"
+  integrity sha512-NUo5XNiAdULrJENtJXZZ3fHtfMolzZwczzBbnAeBbqBwG+LaG6YaJtuwzwGSQZ2wsCrxjEhNNjAkKigy3n8teQ==
+  dependencies:
+    "@types/mime" "*"
+    "@types/node" "*"
 
 "@types/signal-exit@^3.0.1":
   version "3.0.1"
