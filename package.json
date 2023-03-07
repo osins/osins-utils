@@ -1,6 +1,6 @@
 {
   "name": "osins-utils",
-  "version": "0.0.33",
+  "version": "0.0.35",
   "description": "osins uitls",
   "main": "dist/index.js",
   "types": "dist/typing/index.d.ts",
@@ -9,8 +9,8 @@
     "url": "git@github.com:osins/osins-utils.git"
   },
   "scripts": {
-    "dev": "rollup -w --environment NODE_ENV:development -c scripts/rollup.config.dev.ts --configPlugin typescript",
-    "build": "rollup --environment NODE_ENV:development -c scripts/rollup.config.prod.ts --configPlugin typescript",
+    "dev": "rollup -w --environment NODE_ENV:development -c scripts/rollup.config.ts --configPlugin typescript",
+    "build": "rollup --environment NODE_ENV:development -c scripts/rollup.config.ts --configPlugin typescript",
     "x": "npm --no-git-tag-version version major",
     "y": "npm --no-git-tag-version version minor",
     "z": "npm --no-git-tag-version version patch",

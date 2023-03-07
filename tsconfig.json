@@ -1,27 +1,18 @@
 {
   "compilerOptions": {
-    "allowUnreachableCode": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "noEmitOnError": true,
-    "noUnusedParameters": true,
-    "pretty": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
+    "target": "es5",
+    "module": "es6",
+    "declaration": true,
+    "outDir": "./dist",
     "strict": true,
-    "target": "ES2020",
-    "useDefineForClassFields": false,
-    "noImplicitAny": false,
+    "esModuleInterop": true
   },
   "include": [
     "typings/**/*.d.ts",
     "src",
     "cli",
     "browser",
-    "rollup.config.ts"
+    "scripts/rollup.config.tsonfig.ts"
   ],
   "exclude": [
     "dist",
