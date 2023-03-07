@@ -1,6 +1,6 @@
 {
   "name": "osins-utils",
-  "version": "0.0.35",
+  "version": "0.0.37",
   "description": "osins uitls",
   "main": "dist/index.js",
   "types": "dist/typing/index.d.ts",

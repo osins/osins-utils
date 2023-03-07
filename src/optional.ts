@@ -1,4 +1,30 @@
-export const optional = (value: any) => {
+interface OptionalType<T> {
+  isPresent: () => boolean
+  get: () => T
+  orElse: (elseValue: T) => T
+  map: <S>(key: string) => OptionalType<S>
+  isNumeric: () => boolean
+  numberValue: () => number
+  numberNotZero: () => boolean
+  arrayIsEmpty: () => boolean
+  ifPresent: (fn: (value: T) => T) => T | null
+  ifNumberNotZero: (fn: (value: T) => T) => T
+  ifNumberNotZeroOrElse: (fn: (value: T) => T, fn2: (value: T) => T) => T
+  isEmpty: () => boolean
+  ifFail: (fn: (value: T) => void) => void
+  ifPresentOrElse: (
+    fn: ((value: T) => void) | undefined,
+    fn2: ((value: T) => void) | undefined
+  ) => T | null
+  ifArrayNotEmpty: (fn: (data: T) => T) => T | null
+  ifArrayNotEmptyOrElse: (fn: (data: T) => T, fn2: (data: T) => T) => T | null
+  ifNotEmpty: (fn: (data: T) => T) => T
+  ifIsTrue: (fn: (data: T) => T) => T | false
+  isNotFalse: () => boolean
+  ifNotFalse: (fn: (data: T) => T) => T | false
+}
+
+export const optional = <T>(value: any): OptionalType<T> => {
   console.log(`optional, value type: ${typeof value}`)
 
   const isPresent = () => {
@@ -16,7 +42,7 @@ export const optional = (value: any) => {
     return elseValue
   }
 
-  const map = (key: string) => {
+  const map = <S>(key: string): OptionalType<S> => {
     if (value === undefined) {
       return optional(undefined)
     }
@@ -38,7 +64,7 @@ export const optional = (value: any) => {
     return Number(value)
   }
 
-  const isEmpty = () => {
+  const isEmpty = (): boolean => {
     if (!isPresent()) return true
 
     if (typeof value === 'number') {
@@ -52,6 +78,8 @@ export const optional = (value: any) => {
     }
 
     if (typeof value === 'object') return Object.keys(value).length === 0
+
+    return false
   }
 
   const ifPresent = (fn: (value: any) => any) => {
@@ -62,12 +90,10 @@ export const optional = (value: any) => {
     return null
   }
 
-  const ifFail = (fn: (value: any) => void) => {
+  const ifFail = (fn: (value: any) => void): void => {
     if (!isPresent()) {
-      return fn(value)
+      fn(value)
     }
-
-    return null
   }
 
   const ifPresentOrElse = (
