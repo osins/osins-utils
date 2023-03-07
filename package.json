@@ -1,9 +1,9 @@
 {
   "name": "osins-utils",
-  "version": "0.0.43",
+  "version": "0.0.44",
   "description": "osins uitls",
   "main": "dist/index.js",
-  "types": "dist/typing/index.d.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git@github.com:osins/osins-utils.git"
