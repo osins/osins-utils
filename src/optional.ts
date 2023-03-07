@@ -1,4 +1,4 @@
-interface OptionalType<T> {
+export interface OptionalType<T> {
   isPresent: () => boolean
   get: () => T
   orElse: (elseValue: T) => T
