@@ -36,4 +36,4 @@
 
 #### Defined in
 
-[optional.ts:27](https://github.com/osins/osins-utils/blob/b357f8e/src/optional.ts#L27)
+[optional.ts:27](https://github.com/osins/osins-utils/blob/a55731a/src/optional.ts#L27)
