@@ -16,6 +16,7 @@
 - [get](OptionalType.md#get)
 - [ifArrayNotEmpty](OptionalType.md#ifarraynotempty)
 - [ifArrayNotEmptyOrElse](OptionalType.md#ifarraynotemptyorelse)
+- [ifEmpty](OptionalType.md#ifempty)
 - [ifFail](OptionalType.md#iffail)
 - [ifIsTrue](OptionalType.md#ifistrue)
 - [ifNotEmpty](OptionalType.md#ifnotempty)
@@ -91,7 +92,7 @@ ___
 
 #### Defined in
 
-optional.ts:19
+optional.ts:20
 
 ___
 
@@ -116,7 +117,31 @@ ___
 
 #### Defined in
 
-optional.ts:20
+optional.ts:21
+
+___
+
+### ifEmpty
+
+• **ifEmpty**: (`cb`: () => `any`) => `T`
+
+#### Type declaration
+
+▸ (`cb`): `T`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `cb` | () => `any` |
+
+##### Returns
+
+`T`
+
+#### Defined in
+
+optional.ts:14
 
 ___
 
@@ -140,7 +165,7 @@ ___
 
 #### Defined in
 
-optional.ts:14
+optional.ts:15
 
 ___
 
@@ -164,7 +189,7 @@ ___
 
 #### Defined in
 
-optional.ts:22
+optional.ts:23
 
 ___
 
@@ -188,7 +213,7 @@ ___
 
 #### Defined in
 
-optional.ts:21
+optional.ts:22
 
 ___
 
@@ -212,7 +237,7 @@ ___
 
 #### Defined in
 
-optional.ts:24
+optional.ts:25
 
 ___
 
@@ -310,7 +335,7 @@ ___
 
 #### Defined in
 
-optional.ts:15
+optional.ts:16
 
 ___
 
@@ -346,7 +371,7 @@ ___
 
 #### Defined in
 
-optional.ts:23
+optional.ts:24
 
 ___
 
