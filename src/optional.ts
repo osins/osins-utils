@@ -11,10 +11,10 @@ export interface OptionalType<T> {
   ifNumberNotZero: (fn: (value: T) => T) => T
   ifNumberNotZeroOrElse: (fn: (value: T) => T, fn2: (value: T) => T) => T
   isEmpty: () => boolean
-  ifEmpty: (cb: () => any) => T
+  ifEmpty: (cb: () => T) => T
   ifFail: (fn: (value: T) => void) => void
   ifPresentOrElse: (
-    fn: ((value: T) => void) | undefined,
+    fn1: ((value: T) => void) | undefined,
     fn2: ((value: T) => void) | undefined
   ) => T | null
   ifArrayNotEmpty: (fn: (data: T) => T) => T | null

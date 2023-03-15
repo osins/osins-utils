@@ -123,7 +123,7 @@ ___
 
 ### ifEmpty
 
-• **ifEmpty**: (`cb`: () => `any`) => `T`
+• **ifEmpty**: (`cb`: () => `T`) => `T`
 
 #### Type declaration
 
@@ -133,7 +133,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `cb` | () => `any` |
+| `cb` | () => `T` |
 
 ##### Returns
 
