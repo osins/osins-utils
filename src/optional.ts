@@ -11,7 +11,6 @@ export interface OptionalType<T> {
   ifNumberNotZero: (fn: (value: T) => T) => T
   ifNumberNotZeroOrElse: (fn: (value: T) => T, fn2: (value: T) => T) => T
   isEmpty: () => boolean
-  ifEmpty: (cb: () => void) => void
   ifFail: (fn: (value: T) => void) => void
   ifPresentOrElse: (
     fn1: ((value: T) => void) | undefined,
@@ -19,6 +18,7 @@ export interface OptionalType<T> {
   ) => T | null
   ifArrayNotEmpty: (fn: (data: T) => T) => T | null
   ifArrayNotEmptyOrElse: (fn: (data: T) => T, fn2: (data: T) => T) => T | null
+  ifEmpty: (cb: () => void) => void
   ifNotEmpty: (fn: (data: T) => T) => T
   ifIsTrue: (fn: (data: T) => T) => T | false
   isNotFalse: () => boolean
@@ -281,11 +281,11 @@ export const optional = <T>(value: any): OptionalType<T> => {
     ifNumberNotZero: ifNumberNotZero,
     ifNumberNotZeroOrElse: ifNumberNotZeroOrElse,
     isEmpty: isEmpty,
-    ifEmpty: ifEmpty,
     ifFail: ifFail,
     ifPresentOrElse: ifPresentOrElse,
     ifArrayNotEmpty: ifArrayNotEmpty,
     ifArrayNotEmptyOrElse: ifArrayNotEmptyOrElse,
+    ifEmpty: ifEmpty,
     ifNotEmpty: ifNotEmpty,
     ifIsTrue: ifIsTrue,
     isNotFalse: isNotFalse,
