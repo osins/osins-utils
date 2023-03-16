@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[optional.ts:9](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L9)
+[optional.ts:9](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L9)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[optional.ts:3](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L3)
+[optional.ts:3](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L3)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[optional.ts:24](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L24)
+[optional.ts:24](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L24)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[optional.ts:26](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L26)
+[optional.ts:26](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L26)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[optional.ts:11](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L11)
+[optional.ts:11](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L11)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[optional.ts:12](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L12)
+[optional.ts:12](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L12)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[optional.ts:22](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L22)
+[optional.ts:22](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L22)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[optional.ts:23](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L23)
+[optional.ts:23](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L23)
 
 ___
 
@@ -239,7 +239,7 @@ ___
 
 #### Defined in
 
-[optional.ts:17](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L17)
+[optional.ts:17](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L17)
 
 ___
 
@@ -263,7 +263,7 @@ ___
 
 #### Defined in
 
-[optional.ts:15](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L15)
+[optional.ts:15](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L15)
 
 ___
 
@@ -288,7 +288,7 @@ ___
 
 #### Defined in
 
-[optional.ts:16](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L16)
+[optional.ts:16](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L16)
 
 ___
 
@@ -312,7 +312,7 @@ ___
 
 #### Defined in
 
-[optional.ts:10](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L10)
+[optional.ts:10](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L10)
 
 ___
 
@@ -337,7 +337,7 @@ ___
 
 #### Defined in
 
-[optional.ts:18](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L18)
+[optional.ts:18](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L18)
 
 ___
 
@@ -355,7 +355,7 @@ ___
 
 #### Defined in
 
-[optional.ts:13](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L13)
+[optional.ts:13](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L13)
 
 ___
 
@@ -373,7 +373,7 @@ ___
 
 #### Defined in
 
-[optional.ts:25](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L25)
+[optional.ts:25](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L25)
 
 ___
 
@@ -391,7 +391,7 @@ ___
 
 #### Defined in
 
-[optional.ts:6](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L6)
+[optional.ts:6](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L6)
 
 ___
 
@@ -409,7 +409,7 @@ ___
 
 #### Defined in
 
-[optional.ts:2](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L2)
+[optional.ts:2](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L2)
 
 ___
 
@@ -427,7 +427,7 @@ ___
 
 #### Defined in
 
-[optional.ts:14](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L14)
+[optional.ts:14](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L14)
 
 ___
 
@@ -457,7 +457,7 @@ ___
 
 #### Defined in
 
-[optional.ts:5](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L5)
+[optional.ts:5](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L5)
 
 ___
 
@@ -475,7 +475,7 @@ ___
 
 #### Defined in
 
-[optional.ts:8](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L8)
+[optional.ts:8](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L8)
 
 ___
 
@@ -493,7 +493,7 @@ ___
 
 #### Defined in
 
-[optional.ts:7](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L7)
+[optional.ts:7](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L7)
 
 ___
 
@@ -517,4 +517,4 @@ ___
 
 #### Defined in
 
-[optional.ts:4](https://github.com/osins/osins-utils/blob/e0691f5/src/optional.ts#L4)
+[optional.ts:4](https://github.com/osins/osins-utils/blob/e4e60f3/src/optional.ts#L4)
