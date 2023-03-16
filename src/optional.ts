@@ -7,21 +7,23 @@ export interface OptionalType<T> {
   numberValue: () => number
   numberNotZero: () => boolean
   arrayIsEmpty: () => boolean
-  ifPresent: (fn: (value: T) => T) => T | null
-  ifNumberNotZero: (fn: (value: T) => T) => T
-  ifNumberNotZeroOrElse: (fn: (value: T) => T, fn2: (value: T) => T) => T
+  ifPresent: (cb: (value: T) => T) => T | null
+  icbumberNotZero: (cb: (value: T) => T) => T
+  icbumberNotZeroOrElse: (cb1: (value: T) => T, cb2: (value: T) => T) => T
   isEmpty: () => boolean
-  ifFail: (fn: (value: T) => void) => void
+  isTrue: () => boolean
+  ifIsTrue: (cb: (data: T) => T) => T | false
+  ifIsTrueOrElse: (cb1: (data: T) => any, cb2: (data: T) => T) => void
+  ifFail: (cb: (value: T) => void) => void
   ifPresentOrElse: (
-    fn: ((value: T) => void) | undefined,
-    fn2: ((value: T) => void) | undefined
+    cb1: ((value: T) => void) | undefined,
+    cb2: ((value: T) => void) | undefined
   ) => T | null
-  ifArrayNotEmpty: (fn: (data: T) => T) => T | null
-  ifArrayNotEmptyOrElse: (fn: (data: T) => T, fn2: (data: T) => T) => T | null
-  ifNotEmpty: (fn: (data: T) => T) => T
-  ifIsTrue: (fn: (data: T) => T) => T | false
+  ifArrayNotEmpty: (cb: (data: T) => T) => T | null
+  ifArrayNotEmptyOrElse: (cb1: (data: T) => T, cb2: (data: T) => T) => T | null
+  icbotEmpty: (cb: (data: T) => T) => T
   isNotFalse: () => boolean
-  ifNotFalse: (fn: (data: T) => T) => T | false
+  icbotFalse: (cb: (data: T) => T) => T | false
 }
 
 export const optional = <T>(value: any): OptionalType<T> => {
@@ -82,37 +84,56 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return false
   }
 
-  const ifPresent = (fn: (value: any) => any) => {
+  const isTrue = () => {
+    if (!isPresent()) return false
+
+    if (typeof value === 'boolean') {
+      return value === true
+    }
+
+    return false
+  }
+
+  const ifIsTrueOrElse = (cb1: (data: T) => any, cb2: (data: T) => T) => {
+    if (isTrue()) {
+      cb1(value)
+      return
+    }
+
+    cb2(value)
+  }
+
+  const ifPresent = (cb: (value: any) => any) => {
     if (isPresent()) {
-      return fn(value)
+      return cb(value)
     }
 
     return null
   }
 
-  const ifFail = (fn: (value: any) => void): void => {
+  const ifFail = (cb: (value: any) => void): void => {
     if (!isPresent()) {
-      fn(value)
+      cb(value)
     }
   }
 
   const ifPresentOrElse = (
-    fn: ((value: any) => void) | undefined,
-    fn2: ((value: any) => void) | undefined
+    cb1: ((value: any) => void) | undefined,
+    cb2: ((value: any) => void) | undefined
   ): any => {
     if (isPresent()) {
-      if (fn === undefined) {
+      if (cb1 === undefined) {
         return null
       }
 
-      return fn(value)
+      return cb1(value)
     }
 
-    if (fn2 === undefined) {
+    if (cb2 === undefined) {
       return null
     }
 
-    return fn2(value)
+    return cb2(value)
   }
 
   const arrayIsEmpty = () => {
@@ -127,7 +148,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return true
   }
 
-  const ifArrayNotEmpty = (fn: (data: any) => any) => {
+  const ifArrayNotEmpty = (cb: (data: any) => any) => {
     if (!isPresent()) {
       return null
     }
@@ -136,30 +157,30 @@ export const optional = <T>(value: any): OptionalType<T> => {
       return null
     }
 
-    if (fn === undefined) {
+    if (cb === undefined) {
       return null
     }
 
-    return fn(value)
+    return cb(value)
   }
 
   const ifArrayNotEmptyOrElse = (
-    fn: (data: any) => any,
-    fn2: (data: any) => any
+    cb1: (data: any) => any,
+    cb2: (data: any) => any
   ) => {
     if (!isPresent()) {
-      return fn2(value)
+      return cb2(value)
     }
 
     if (Array.isArray(value) && value.length === 0) {
-      return fn2(value)
+      return cb2(value)
     }
 
-    if (fn === undefined) {
+    if (cb1 === undefined) {
       return value
     }
 
-    return fn(value)
+    return cb1(value)
   }
 
   const numberNotZero = () => {
@@ -174,7 +195,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return false
   }
 
-  const ifNumberNotZero = (fn: (data: any) => any) => {
+  const icbumberNotZero = (cb: (data: any) => any) => {
     if (!isPresent()) {
       return value
     }
@@ -183,7 +204,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
       return value
     }
 
-    if (fn === undefined) {
+    if (cb === undefined) {
       return value
     }
 
@@ -191,41 +212,41 @@ export const optional = <T>(value: any): OptionalType<T> => {
       return value
     }
 
-    return fn(value)
+    return cb(value)
   }
 
-  const ifNumberNotZeroOrElse = (
-    fn: (data: any) => any,
-    fn2: (data: any) => any
+  const icbumberNotZeroOrElse = (
+    cb1: (data: any) => any,
+    cb2: (data: any) => any
   ) => {
     if (!isPresent()) {
-      return fn2(value)
+      return cb2(value)
     }
 
     if (isNumeric() && value === 0) {
-      return fn2(value)
+      return cb2(value)
     }
 
-    if (fn === undefined) {
+    if (cb1 === undefined) {
       return value
     }
 
-    return fn(value)
+    return cb1(value)
   }
 
-  const ifNotEmpty = (fn: (data: any) => any) => {
+  const icbotEmpty = (cb: (data: any) => any) => {
     if (!isPresent()) {
       return value
     }
 
     if (!isEmpty()) {
-      return fn(value)
+      return cb(value)
     }
 
     return value
   }
 
-  const ifIsTrue = (fn: (data: any) => any) => {
+  const ifIsTrue = (cb: (data: any) => any) => {
     if (!isPresent()) {
       return value
     }
@@ -234,12 +255,12 @@ export const optional = <T>(value: any): OptionalType<T> => {
       return false
     }
 
-    if (fn === undefined) {
+    if (cb === undefined) {
       return value
     }
 
     if (typeof value === 'boolean' && value === true) {
-      return fn(value)
+      return cb(value)
     }
 
     return false
@@ -253,9 +274,9 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return true
   }
 
-  const ifNotFalse = (fn: (data: any) => any) => {
+  const icbotFalse = (cb: (data: any) => any) => {
     if (isNotFalse()) {
-      return fn(value)
+      return cb(value)
     }
 
     return false
@@ -271,16 +292,18 @@ export const optional = <T>(value: any): OptionalType<T> => {
     numberNotZero: numberNotZero,
     arrayIsEmpty: arrayIsEmpty,
     ifPresent: ifPresent,
-    ifNumberNotZero: ifNumberNotZero,
-    ifNumberNotZeroOrElse: ifNumberNotZeroOrElse,
+    icbumberNotZero: icbumberNotZero,
+    icbumberNotZeroOrElse: icbumberNotZeroOrElse,
     isEmpty: isEmpty,
+    isTrue: isTrue,
+    ifIsTrueOrElse: ifIsTrueOrElse,
     ifFail: ifFail,
     ifPresentOrElse: ifPresentOrElse,
     ifArrayNotEmpty: ifArrayNotEmpty,
     ifArrayNotEmptyOrElse: ifArrayNotEmptyOrElse,
-    ifNotEmpty: ifNotEmpty,
+    icbotEmpty: icbotEmpty,
     ifIsTrue: ifIsTrue,
     isNotFalse: isNotFalse,
-    ifNotFalse: ifNotFalse,
+    icbotFalse: icbotFalse,
   }
 }

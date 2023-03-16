@@ -14,20 +14,22 @@
 
 - [arrayIsEmpty](OptionalType.md#arrayisempty)
 - [get](OptionalType.md#get)
+- [icbotEmpty](OptionalType.md#icbotempty)
+- [icbotFalse](OptionalType.md#icbotfalse)
+- [icbumberNotZero](OptionalType.md#icbumbernotzero)
+- [icbumberNotZeroOrElse](OptionalType.md#icbumbernotzeroorelse)
 - [ifArrayNotEmpty](OptionalType.md#ifarraynotempty)
 - [ifArrayNotEmptyOrElse](OptionalType.md#ifarraynotemptyorelse)
 - [ifFail](OptionalType.md#iffail)
 - [ifIsTrue](OptionalType.md#ifistrue)
-- [ifNotEmpty](OptionalType.md#ifnotempty)
-- [ifNotFalse](OptionalType.md#ifnotfalse)
-- [ifNumberNotZero](OptionalType.md#ifnumbernotzero)
-- [ifNumberNotZeroOrElse](OptionalType.md#ifnumbernotzeroorelse)
+- [ifIsTrueOrElse](OptionalType.md#ifistrueorelse)
 - [ifPresent](OptionalType.md#ifpresent)
 - [ifPresentOrElse](OptionalType.md#ifpresentorelse)
 - [isEmpty](OptionalType.md#isempty)
 - [isNotFalse](OptionalType.md#isnotfalse)
 - [isNumeric](OptionalType.md#isnumeric)
 - [isPresent](OptionalType.md#ispresent)
+- [isTrue](OptionalType.md#istrue)
 - [map](OptionalType.md#map)
 - [numberNotZero](OptionalType.md#numbernotzero)
 - [numberValue](OptionalType.md#numbervalue)
@@ -49,7 +51,7 @@
 
 #### Defined in
 
-[optional.ts:9](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L9)
+[optional.ts:9](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L9)
 
 ___
 
@@ -67,23 +69,120 @@ ___
 
 #### Defined in
 
-[optional.ts:3](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L3)
+[optional.ts:3](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L3)
+
+___
+
+### icbotEmpty
+
+• **icbotEmpty**: (`cb`: (`data`: `T`) => `T`) => `T`
+
+#### Type declaration
+
+▸ (`cb`): `T`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `cb` | (`data`: `T`) => `T` |
+
+##### Returns
+
+`T`
+
+#### Defined in
+
+[optional.ts:24](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L24)
+
+___
+
+### icbotFalse
+
+• **icbotFalse**: (`cb`: (`data`: `T`) => `T`) => ``false`` \| `T`
+
+#### Type declaration
+
+▸ (`cb`): ``false`` \| `T`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `cb` | (`data`: `T`) => `T` |
+
+##### Returns
+
+``false`` \| `T`
+
+#### Defined in
+
+[optional.ts:26](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L26)
+
+___
+
+### icbumberNotZero
+
+• **icbumberNotZero**: (`cb`: (`value`: `T`) => `T`) => `T`
+
+#### Type declaration
+
+▸ (`cb`): `T`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `cb` | (`value`: `T`) => `T` |
+
+##### Returns
+
+`T`
+
+#### Defined in
+
+[optional.ts:11](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L11)
+
+___
+
+### icbumberNotZeroOrElse
+
+• **icbumberNotZeroOrElse**: (`cb1`: (`value`: `T`) => `T`, `cb2`: (`value`: `T`) => `T`) => `T`
+
+#### Type declaration
+
+▸ (`cb1`, `cb2`): `T`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `cb1` | (`value`: `T`) => `T` |
+| `cb2` | (`value`: `T`) => `T` |
+
+##### Returns
+
+`T`
+
+#### Defined in
+
+[optional.ts:12](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L12)
 
 ___
 
 ### ifArrayNotEmpty
 
-• **ifArrayNotEmpty**: (`fn`: (`data`: `T`) => `T`) => ``null`` \| `T`
+• **ifArrayNotEmpty**: (`cb`: (`data`: `T`) => `T`) => ``null`` \| `T`
 
 #### Type declaration
 
-▸ (`fn`): ``null`` \| `T`
+▸ (`cb`): ``null`` \| `T`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `fn` | (`data`: `T`) => `T` |
+| `cb` | (`data`: `T`) => `T` |
 
 ##### Returns
 
@@ -91,24 +190,24 @@ ___
 
 #### Defined in
 
-[optional.ts:19](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L19)
+[optional.ts:22](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L22)
 
 ___
 
 ### ifArrayNotEmptyOrElse
 
-• **ifArrayNotEmptyOrElse**: (`fn`: (`data`: `T`) => `T`, `fn2`: (`data`: `T`) => `T`) => ``null`` \| `T`
+• **ifArrayNotEmptyOrElse**: (`cb1`: (`data`: `T`) => `T`, `cb2`: (`data`: `T`) => `T`) => ``null`` \| `T`
 
 #### Type declaration
 
-▸ (`fn`, `fn2`): ``null`` \| `T`
+▸ (`cb1`, `cb2`): ``null`` \| `T`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `fn` | (`data`: `T`) => `T` |
-| `fn2` | (`data`: `T`) => `T` |
+| `cb1` | (`data`: `T`) => `T` |
+| `cb2` | (`data`: `T`) => `T` |
 
 ##### Returns
 
@@ -116,23 +215,23 @@ ___
 
 #### Defined in
 
-[optional.ts:20](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L20)
+[optional.ts:23](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L23)
 
 ___
 
 ### ifFail
 
-• **ifFail**: (`fn`: (`value`: `T`) => `void`) => `void`
+• **ifFail**: (`cb`: (`value`: `T`) => `void`) => `void`
 
 #### Type declaration
 
-▸ (`fn`): `void`
+▸ (`cb`): `void`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `fn` | (`value`: `T`) => `void` |
+| `cb` | (`value`: `T`) => `void` |
 
 ##### Returns
 
@@ -140,23 +239,23 @@ ___
 
 #### Defined in
 
-[optional.ts:14](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L14)
+[optional.ts:17](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L17)
 
 ___
 
 ### ifIsTrue
 
-• **ifIsTrue**: (`fn`: (`data`: `T`) => `T`) => ``false`` \| `T`
+• **ifIsTrue**: (`cb`: (`data`: `T`) => `T`) => ``false`` \| `T`
 
 #### Type declaration
 
-▸ (`fn`): ``false`` \| `T`
+▸ (`cb`): ``false`` \| `T`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `fn` | (`data`: `T`) => `T` |
+| `cb` | (`data`: `T`) => `T` |
 
 ##### Returns
 
@@ -164,120 +263,48 @@ ___
 
 #### Defined in
 
-[optional.ts:22](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L22)
+[optional.ts:15](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L15)
 
 ___
 
-### ifNotEmpty
+### ifIsTrueOrElse
 
-• **ifNotEmpty**: (`fn`: (`data`: `T`) => `T`) => `T`
+• **ifIsTrueOrElse**: (`cb1`: (`data`: `T`) => `any`, `cb2`: (`data`: `T`) => `T`) => `void`
 
 #### Type declaration
 
-▸ (`fn`): `T`
+▸ (`cb1`, `cb2`): `void`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `fn` | (`data`: `T`) => `T` |
+| `cb1` | (`data`: `T`) => `any` |
+| `cb2` | (`data`: `T`) => `T` |
 
 ##### Returns
 
-`T`
+`void`
 
 #### Defined in
 
-[optional.ts:21](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L21)
-
-___
-
-### ifNotFalse
-
-• **ifNotFalse**: (`fn`: (`data`: `T`) => `T`) => ``false`` \| `T`
-
-#### Type declaration
-
-▸ (`fn`): ``false`` \| `T`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `fn` | (`data`: `T`) => `T` |
-
-##### Returns
-
-``false`` \| `T`
-
-#### Defined in
-
-[optional.ts:24](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L24)
-
-___
-
-### ifNumberNotZero
-
-• **ifNumberNotZero**: (`fn`: (`value`: `T`) => `T`) => `T`
-
-#### Type declaration
-
-▸ (`fn`): `T`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `fn` | (`value`: `T`) => `T` |
-
-##### Returns
-
-`T`
-
-#### Defined in
-
-[optional.ts:11](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L11)
-
-___
-
-### ifNumberNotZeroOrElse
-
-• **ifNumberNotZeroOrElse**: (`fn`: (`value`: `T`) => `T`, `fn2`: (`value`: `T`) => `T`) => `T`
-
-#### Type declaration
-
-▸ (`fn`, `fn2`): `T`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `fn` | (`value`: `T`) => `T` |
-| `fn2` | (`value`: `T`) => `T` |
-
-##### Returns
-
-`T`
-
-#### Defined in
-
-[optional.ts:12](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L12)
+[optional.ts:16](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L16)
 
 ___
 
 ### ifPresent
 
-• **ifPresent**: (`fn`: (`value`: `T`) => `T`) => ``null`` \| `T`
+• **ifPresent**: (`cb`: (`value`: `T`) => `T`) => ``null`` \| `T`
 
 #### Type declaration
 
-▸ (`fn`): ``null`` \| `T`
+▸ (`cb`): ``null`` \| `T`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `fn` | (`value`: `T`) => `T` |
+| `cb` | (`value`: `T`) => `T` |
 
 ##### Returns
 
@@ -285,24 +312,24 @@ ___
 
 #### Defined in
 
-[optional.ts:10](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L10)
+[optional.ts:10](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L10)
 
 ___
 
 ### ifPresentOrElse
 
-• **ifPresentOrElse**: (`fn`: `undefined` \| (`value`: `T`) => `void`, `fn2`: `undefined` \| (`value`: `T`) => `void`) => ``null`` \| `T`
+• **ifPresentOrElse**: (`cb1`: `undefined` \| (`value`: `T`) => `void`, `cb2`: `undefined` \| (`value`: `T`) => `void`) => ``null`` \| `T`
 
 #### Type declaration
 
-▸ (`fn`, `fn2`): ``null`` \| `T`
+▸ (`cb1`, `cb2`): ``null`` \| `T`
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `fn` | `undefined` \| (`value`: `T`) => `void` |
-| `fn2` | `undefined` \| (`value`: `T`) => `void` |
+| `cb1` | `undefined` \| (`value`: `T`) => `void` |
+| `cb2` | `undefined` \| (`value`: `T`) => `void` |
 
 ##### Returns
 
@@ -310,7 +337,7 @@ ___
 
 #### Defined in
 
-[optional.ts:15](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L15)
+[optional.ts:18](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L18)
 
 ___
 
@@ -328,7 +355,7 @@ ___
 
 #### Defined in
 
-[optional.ts:13](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L13)
+[optional.ts:13](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L13)
 
 ___
 
@@ -346,7 +373,7 @@ ___
 
 #### Defined in
 
-[optional.ts:23](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L23)
+[optional.ts:25](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L25)
 
 ___
 
@@ -364,7 +391,7 @@ ___
 
 #### Defined in
 
-[optional.ts:6](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L6)
+[optional.ts:6](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L6)
 
 ___
 
@@ -382,7 +409,25 @@ ___
 
 #### Defined in
 
-[optional.ts:2](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L2)
+[optional.ts:2](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L2)
+
+___
+
+### isTrue
+
+• **isTrue**: () => `boolean`
+
+#### Type declaration
+
+▸ (): `boolean`
+
+##### Returns
+
+`boolean`
+
+#### Defined in
+
+[optional.ts:14](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L14)
 
 ___
 
@@ -412,7 +457,7 @@ ___
 
 #### Defined in
 
-[optional.ts:5](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L5)
+[optional.ts:5](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L5)
 
 ___
 
@@ -430,7 +475,7 @@ ___
 
 #### Defined in
 
-[optional.ts:8](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L8)
+[optional.ts:8](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L8)
 
 ___
 
@@ -448,7 +493,7 @@ ___
 
 #### Defined in
 
-[optional.ts:7](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L7)
+[optional.ts:7](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L7)
 
 ___
 
@@ -472,4 +517,4 @@ ___
 
 #### Defined in
 
-[optional.ts:4](https://github.com/osins/osins-utils/blob/23ce808/src/optional.ts#L4)
+[optional.ts:4](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L4)
