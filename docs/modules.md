@@ -40,7 +40,7 @@
 
 #### Defined in
 
-result.ts:12
+[result.ts:12](https://github.com/osins/osins-utils/blob/62da9e5/src/result.ts#L12)
 
 ___
 
@@ -66,10 +66,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:29](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L29)
-=======
-optional.ts:28
+[optional.ts:29](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L29)
 
 ___
 
@@ -95,7 +92,7 @@ ___
 
 #### Defined in
 
-result.ts:8
+[result.ts:8](https://github.com/osins/osins-utils/blob/62da9e5/src/result.ts#L8)
 
 ___
 
@@ -122,5 +119,4 @@ ___
 
 #### Defined in
 
-result.ts:19
->>>>>>> refs/remotes/origin/master
+[result.ts:19](https://github.com/osins/osins-utils/blob/62da9e5/src/result.ts#L19)

@@ -20,7 +20,6 @@
 - [icbumberNotZeroOrElse](OptionalType.md#icbumbernotzeroorelse)
 - [ifArrayNotEmpty](OptionalType.md#ifarraynotempty)
 - [ifArrayNotEmptyOrElse](OptionalType.md#ifarraynotemptyorelse)
-- [ifEmpty](OptionalType.md#ifempty)
 - [ifFail](OptionalType.md#iffail)
 - [ifIsTrue](OptionalType.md#ifistrue)
 - [ifIsTrueOrElse](OptionalType.md#ifistrueorelse)
@@ -52,11 +51,7 @@
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:9](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L9)
-=======
-optional.ts:9
->>>>>>> refs/remotes/origin/master
+[optional.ts:9](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L9)
 
 ___
 
@@ -74,11 +69,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:3](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L3)
-=======
-optional.ts:3
->>>>>>> refs/remotes/origin/master
+[optional.ts:3](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L3)
 
 ___
 
@@ -102,11 +93,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:24](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L24)
-=======
-optional.ts:19
->>>>>>> refs/remotes/origin/master
+[optional.ts:24](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L24)
 
 ___
 
@@ -130,35 +117,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:26](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L26)
-=======
-optional.ts:20
-
-___
-
-### ifEmpty
-
-• **ifEmpty**: (`cb`: () => `void`) => `void`
-
-#### Type declaration
-
-▸ (`cb`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `cb` | () => `void` |
-
-##### Returns
-
-`void`
-
-#### Defined in
-
-optional.ts:21
->>>>>>> refs/remotes/origin/master
+[optional.ts:26](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L26)
 
 ___
 
@@ -182,11 +141,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:11](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L11)
-=======
-optional.ts:14
->>>>>>> refs/remotes/origin/master
+[optional.ts:11](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L11)
 
 ___
 
@@ -211,11 +166,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:12](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L12)
-=======
-optional.ts:23
->>>>>>> refs/remotes/origin/master
+[optional.ts:12](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L12)
 
 ___
 
@@ -239,11 +190,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:22](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L22)
-=======
-optional.ts:22
->>>>>>> refs/remotes/origin/master
+[optional.ts:22](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L22)
 
 ___
 
@@ -268,11 +215,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:23](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L23)
-=======
-optional.ts:25
->>>>>>> refs/remotes/origin/master
+[optional.ts:23](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L23)
 
 ___
 
@@ -296,11 +239,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:17](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L17)
-=======
-optional.ts:11
->>>>>>> refs/remotes/origin/master
+[optional.ts:17](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L17)
 
 ___
 
@@ -324,7 +263,7 @@ ___
 
 #### Defined in
 
-[optional.ts:15](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L15)
+[optional.ts:15](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L15)
 
 ___
 
@@ -349,11 +288,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:16](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L16)
-=======
-optional.ts:12
->>>>>>> refs/remotes/origin/master
+[optional.ts:16](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L16)
 
 ___
 
@@ -377,41 +312,24 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:10](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L10)
-=======
-optional.ts:10
->>>>>>> refs/remotes/origin/master
+[optional.ts:10](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L10)
 
 ___
 
 ### ifPresentOrElse
 
-<<<<<<< HEAD
 • **ifPresentOrElse**: (`cb1`: `undefined` \| (`value`: `T`) => `void`, `cb2`: `undefined` \| (`value`: `T`) => `void`) => ``null`` \| `T`
 
 #### Type declaration
 
 ▸ (`cb1`, `cb2`): ``null`` \| `T`
-=======
-• **ifPresentOrElse**: (`fn1`: `undefined` \| (`value`: `T`) => `void`, `fn2`: `undefined` \| (`value`: `T`) => `void`) => ``null`` \| `T`
-
-#### Type declaration
-
-▸ (`fn1`, `fn2`): ``null`` \| `T`
->>>>>>> refs/remotes/origin/master
 
 ##### Parameters
 
 | Name | Type |
 | :------ | :------ |
-<<<<<<< HEAD
 | `cb1` | `undefined` \| (`value`: `T`) => `void` |
 | `cb2` | `undefined` \| (`value`: `T`) => `void` |
-=======
-| `fn1` | `undefined` \| (`value`: `T`) => `void` |
-| `fn2` | `undefined` \| (`value`: `T`) => `void` |
->>>>>>> refs/remotes/origin/master
 
 ##### Returns
 
@@ -419,11 +337,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:18](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L18)
-=======
-optional.ts:15
->>>>>>> refs/remotes/origin/master
+[optional.ts:18](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L18)
 
 ___
 
@@ -441,11 +355,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:13](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L13)
-=======
-optional.ts:13
->>>>>>> refs/remotes/origin/master
+[optional.ts:13](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L13)
 
 ___
 
@@ -463,11 +373,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:25](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L25)
-=======
-optional.ts:24
->>>>>>> refs/remotes/origin/master
+[optional.ts:25](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L25)
 
 ___
 
@@ -485,11 +391,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:6](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L6)
-=======
-optional.ts:6
->>>>>>> refs/remotes/origin/master
+[optional.ts:6](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L6)
 
 ___
 
@@ -507,8 +409,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:2](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L2)
+[optional.ts:2](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L2)
 
 ___
 
@@ -526,10 +427,7 @@ ___
 
 #### Defined in
 
-[optional.ts:14](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L14)
-=======
-optional.ts:2
->>>>>>> refs/remotes/origin/master
+[optional.ts:14](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L14)
 
 ___
 
@@ -559,11 +457,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:5](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L5)
-=======
-optional.ts:5
->>>>>>> refs/remotes/origin/master
+[optional.ts:5](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L5)
 
 ___
 
@@ -581,11 +475,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:8](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L8)
-=======
-optional.ts:8
->>>>>>> refs/remotes/origin/master
+[optional.ts:8](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L8)
 
 ___
 
@@ -603,11 +493,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:7](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L7)
-=======
-optional.ts:7
->>>>>>> refs/remotes/origin/master
+[optional.ts:7](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L7)
 
 ___
 
@@ -631,8 +517,4 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[optional.ts:4](https://github.com/osins/osins-utils/blob/096e636/src/optional.ts#L4)
-=======
-optional.ts:4
->>>>>>> refs/remotes/origin/master
+[optional.ts:4](https://github.com/osins/osins-utils/blob/62da9e5/src/optional.ts#L4)
