@@ -1,6 +1,10 @@
 {
     "DockerRun.DisableDockerrc": true,
+<<<<<<< HEAD
     "DockerRun.Containers": [
         "3756d3af1435"
     ]
+=======
+    "typescript.tsdk": "node_modules/typescript/lib"
+>>>>>>> refs/remotes/origin/master
 }

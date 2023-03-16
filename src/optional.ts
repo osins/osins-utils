@@ -30,14 +30,14 @@ export const optional = <T>(value: any): OptionalType<T> => {
   console.log(`optional, value type: ${typeof value}`)
 
   const isPresent = () => {
-    return !(value === undefined || value === null)
+    return (value !== undefined && value !== null)
   }
 
-  const get = (): any => {
+  const get = (): T => {
     return value
   }
 
-  const orElse = (elseValue: any) => {
+  const orElse = (elseValue: T) => {
     if (isPresent()) {
       return value
     }
@@ -45,7 +45,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
   }
 
   const map = <S>(key: string): OptionalType<S> => {
-    if (value === undefined) {
+    if (value === undefined || value == null) {
       return optional(undefined)
     }
 
