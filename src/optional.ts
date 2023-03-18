@@ -20,7 +20,7 @@ export interface OptionalType<T> {
     cb2: () => R | null
   ) => R | null
   ifArrayNotEmpty: <R>(cb: (data: T) => R | null) => R | null
-  ifArrayNotEmptyOrElse: <R>(cb1: (data: T) => R | null, cb2: (data: T) => R | null) => R | null
+  ifArrayNotEmptyOrElse: <R>(cb1: (data: any[]) => Array<R> | null, cb2: (data: any[]) => Array<R> | null) => Array<R> | null
   ifNotEmpty: <R>(cb: (data: T) => R | null) => R | null
   isNotFalse: () => boolean
   ifNotFalse: <R>(cb: (data: T) => R | null) => R | null
@@ -29,7 +29,7 @@ export interface OptionalType<T> {
 export const optional = <T>(value: any): OptionalType<T> => {
   console.log(`optional, value type: ${typeof value}`)
 
-  const isPresent = () => {
+  const isPresent = (): boolean => {
     return (value !== undefined && value !== null)
   }
 
@@ -37,7 +37,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return value
   }
 
-  const orElse = (elseValue: T) => {
+  const orElse = (elseValue: T): T => {
     if (isPresent()) {
       return value
     }
@@ -52,7 +52,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return optional(value[key])
   }
 
-  const isNumeric = () => {
+  const isNumeric = (): boolean => {
     if (typeof value === 'number') {
       return true
     }
@@ -84,7 +84,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return false
   }
 
-  const isTrue = () => {
+  const isTrue = (): boolean => {
     if (!isPresent()) return false
 
     if (typeof value === 'boolean') {
@@ -102,7 +102,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return cb2(value)
   }
 
-  const ifPresent = (cb: (value: any) => any) => {
+  const ifPresent = <R>(cb: (value: T) => R | null): R | null => {
     if (isPresent()) {
       return cb(value)
     }
@@ -118,10 +118,10 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return null
   }
 
-  const ifPresentOrElse = <T>(
-    cb1: (value: any) => T,
-    cb2: (value: any) => T | null
-  ): any => {
+  const ifPresentOrElse = <R>(
+    cb1: (value: T) => R | null,
+    cb2: () => R | null
+  ): R | null => {
     if (isPresent()) {
       if (cb1 === undefined) {
         return null
@@ -134,10 +134,10 @@ export const optional = <T>(value: any): OptionalType<T> => {
       return null
     }
 
-    return cb2(value)
+    return cb2()
   }
 
-  const arrayIsEmpty = () => {
+  const arrayIsEmpty = (): boolean => {
     if (!isPresent()) {
       return true
     }
@@ -149,7 +149,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return true
   }
 
-  const ifArrayNotEmpty = (cb: (data: any) => any) => {
+  const ifArrayNotEmpty = <R>(cb: (data: T) => R | null): R | null => {
     if (!isPresent()) {
       return null
     }
@@ -165,20 +165,24 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return cb(value)
   }
 
-  const ifArrayNotEmptyOrElse = (
-    cb1: (data: any) => any,
-    cb2: (data: any) => any
-  ) => {
+  const ifArrayNotEmptyOrElse = <R>(
+    cb1: (data: any[]) => Array<R> | null,
+    cb2: (data: any[]) => Array<R> | null
+  ): Array<R> | null => {
     if (!isPresent()) {
       return cb2(value)
     }
 
-    if (Array.isArray(value) && value.length === 0) {
+    if (Array.isArray(value) && value.length > 0) {
+      if (cb2 === undefined) {
+        return null
+      }
+
       return cb2(value)
     }
 
     if (cb1 === undefined) {
-      return value
+      return null
     }
 
     return cb1(value)

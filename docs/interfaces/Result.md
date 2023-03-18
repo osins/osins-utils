@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[result.ts:4](https://github.com/osins/osins-utils/blob/b3af47a/src/result.ts#L4)
+[result.ts:4](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L4)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[result.ts:5](https://github.com/osins/osins-utils/blob/b3af47a/src/result.ts#L5)
+[result.ts:5](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L5)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[result.ts:3](https://github.com/osins/osins-utils/blob/b3af47a/src/result.ts#L3)
+[result.ts:3](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L3)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[result.ts:2](https://github.com/osins/osins-utils/blob/b3af47a/src/result.ts#L2)
+[result.ts:2](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L2)
