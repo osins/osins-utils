@@ -117,9 +117,9 @@ export const optional = <T>(value: any): OptionalType<T> => {
     }
   }
 
-  const ifPresentOrElse = (
-    cb1: ((value: any) => void) | undefined,
-    cb2: ((value: any) => void) | undefined
+  const ifPresentOrElse = <T>(
+    cb1: (value: any) => T,
+    cb2: (value: any) => T | null
   ): any => {
     if (isPresent()) {
       if (cb1 === undefined) {
