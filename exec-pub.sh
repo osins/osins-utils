@@ -1,5 +1,6 @@
 #!/bin/bash
 
+nrm use npm
 npx typedoc src/index.ts
 npx typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts
 

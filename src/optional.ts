@@ -6,24 +6,24 @@ export interface OptionalType<T> {
   isNumeric: () => boolean
   numberValue: () => number
   numberNotZero: () => boolean
-  arrayIsEmpty: () => boolean
-  ifPresent: (cb: (value: T) => T) => T | null
-  icbumberNotZero: (cb: (value: T) => T) => T
-  icbumberNotZeroOrElse: (cb1: (value: T) => T, cb2: (value: T) => T) => T
+  isArrayAndEmpty: () => boolean
   isEmpty: () => boolean
   isTrue: () => boolean
-  ifIsTrue: (cb: (data: T) => T) => T | false
-  ifIsTrueOrElse: (cb1: (data: T) => any, cb2: (data: T) => T) => void
-  ifFail: (cb: (value: T) => void) => void
-  ifPresentOrElse: (
-    cb1: ((value: T) => void) | undefined,
-    cb2: ((value: T) => void) | undefined
-  ) => T | null
-  ifArrayNotEmpty: (cb: (data: T) => T) => T | null
-  ifArrayNotEmptyOrElse: (cb1: (data: T) => T, cb2: (data: T) => T) => T | null
-  icbotEmpty: (cb: (data: T) => T) => T
+  ifPresent: <R>(cb: (value: T) => R | null) => R | null
+  ifNotZero: <R>(cb: (value: T) => R | null) => R | null
+  ifNotZeroOrElse: <R>(cb1: (value: T) => R | null, cb2: () => R) => R
+  ifIsTrue: <R>(cb: (data: T) => R | null) => R | null
+  ifIsTrueOrElse: <R>(cb1: (data: T) => R | null, cb2: (data: T) => R | null) => R | null
+  ifFail: <R>(cb: (value: T) => R | null) => R | null
+  ifPresentOrElse: <R>(
+    cb1: (value: T) => R | null,
+    cb2: () => R | null
+  ) => R | null
+  ifArrayNotEmpty: <R>(cb: (data: T) => R | null) => R | null
+  ifArrayNotEmptyOrElse: <R>(cb1: (data: T) => R | null, cb2: (data: T) => R | null) => R | null
+  ifNotEmpty: <R>(cb: (data: T) => R | null) => R | null
   isNotFalse: () => boolean
-  icbotFalse: (cb: (data: T) => T) => T | false
+  ifNotFalse: <R>(cb: (data: T) => R | null) => R | null
 }
 
 export const optional = <T>(value: any): OptionalType<T> => {
@@ -94,13 +94,12 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return false
   }
 
-  const ifIsTrueOrElse = (cb1: (data: T) => any, cb2: (data: T) => T) => {
+  const ifIsTrueOrElse = <R>(cb1: (data: T) => R | null, cb2: (data: T) => R | null): R | null => {
     if (isTrue()) {
-      cb1(value)
-      return
+      return cb1(value)
     }
 
-    cb2(value)
+    return cb2(value)
   }
 
   const ifPresent = (cb: (value: any) => any) => {
@@ -111,10 +110,12 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return null
   }
 
-  const ifFail = (cb: (value: any) => void): void => {
+  const ifFail = <R>(cb: (value: T) => R | null): R | null => {
     if (!isPresent()) {
-      cb(value)
+      return cb(value)
     }
+
+    return null
   }
 
   const ifPresentOrElse = <T>(
@@ -195,7 +196,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return false
   }
 
-  const icbumberNotZero = (cb: (data: any) => any) => {
+  const ifNotZero = (cb: (data: any) => any) => {
     if (!isPresent()) {
       return value
     }
@@ -215,7 +216,7 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return cb(value)
   }
 
-  const icbumberNotZeroOrElse = (
+  const isNotZeroOrElse = (
     cb1: (data: any) => any,
     cb2: (data: any) => any
   ) => {
@@ -234,16 +235,12 @@ export const optional = <T>(value: any): OptionalType<T> => {
     return cb1(value)
   }
 
-  const icbotEmpty = (cb: (data: any) => any) => {
-    if (!isPresent()) {
-      return value
+  const ifNotEmpty = <R>(cb: (data: T) => R | null): R | null => {
+    if (!isPresent() || isEmpty()) {
+      return null
     }
 
-    if (!isEmpty()) {
-      return cb(value)
-    }
-
-    return value
+    return cb(value)
   }
 
   const ifIsTrue = (cb: (data: any) => any) => {
@@ -290,10 +287,10 @@ export const optional = <T>(value: any): OptionalType<T> => {
     isNumeric: isNumeric,
     numberValue: numberValue,
     numberNotZero: numberNotZero,
-    arrayIsEmpty: arrayIsEmpty,
+    isArrayAndEmpty: arrayIsEmpty,
     ifPresent: ifPresent,
-    icbumberNotZero: icbumberNotZero,
-    icbumberNotZeroOrElse: icbumberNotZeroOrElse,
+    ifNotZero: ifNotZero,
+    ifNotZeroOrElse: isNotZeroOrElse,
     isEmpty: isEmpty,
     isTrue: isTrue,
     ifIsTrueOrElse: ifIsTrueOrElse,
@@ -301,9 +298,9 @@ export const optional = <T>(value: any): OptionalType<T> => {
     ifPresentOrElse: ifPresentOrElse,
     ifArrayNotEmpty: ifArrayNotEmpty,
     ifArrayNotEmptyOrElse: ifArrayNotEmptyOrElse,
-    icbotEmpty: icbotEmpty,
+    ifNotEmpty: ifNotEmpty,
     ifIsTrue: ifIsTrue,
     isNotFalse: isNotFalse,
-    icbotFalse: icbotFalse,
+    ifNotFalse: icbotFalse,
   }
 }
