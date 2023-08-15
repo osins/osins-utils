@@ -40,7 +40,11 @@
 
 #### Defined in
 
+<<<<<<< HEAD
 [result.ts:12](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L12)
+=======
+[result.ts:12](https://github.com/osins/osins-utils/blob/de67fbb/src/result.ts#L12)
+>>>>>>> 090c7aa (update)
 
 ___
 
@@ -66,7 +70,11 @@ ___
 
 #### Defined in
 
+<<<<<<< HEAD
 [optional.ts:29](https://github.com/osins/osins-utils/blob/b1b8065/src/optional.ts#L29)
+=======
+[optional.ts:29](https://github.com/osins/osins-utils/blob/de67fbb/src/optional.ts#L29)
+>>>>>>> 090c7aa (update)
 
 ___
 
@@ -92,7 +100,11 @@ ___
 
 #### Defined in
 
+<<<<<<< HEAD
 [result.ts:8](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L8)
+=======
+[result.ts:8](https://github.com/osins/osins-utils/blob/de67fbb/src/result.ts#L8)
+>>>>>>> 090c7aa (update)
 
 ___
 
@@ -119,4 +131,8 @@ ___
 
 #### Defined in
 
+<<<<<<< HEAD
 [result.ts:19](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L19)
+=======
+[result.ts:19](https://github.com/osins/osins-utils/blob/de67fbb/src/result.ts#L19)
+>>>>>>> 090c7aa (update)
