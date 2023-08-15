@@ -25,11 +25,7 @@
 
 #### Defined in
 
-<<<<<<< HEAD
-[result.ts:4](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L4)
-=======
-[result.ts:4](https://github.com/osins/osins-utils/blob/de67fbb/src/result.ts#L4)
->>>>>>> 090c7aa (update)
+[result.ts:4](https://github.com/osins/osins-utils/blob/89f487e/src/result.ts#L4)
 
 ___
 
@@ -39,11 +35,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[result.ts:5](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L5)
-=======
-[result.ts:5](https://github.com/osins/osins-utils/blob/de67fbb/src/result.ts#L5)
->>>>>>> 090c7aa (update)
+[result.ts:5](https://github.com/osins/osins-utils/blob/89f487e/src/result.ts#L5)
 
 ___
 
@@ -53,11 +45,7 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[result.ts:3](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L3)
-=======
-[result.ts:3](https://github.com/osins/osins-utils/blob/de67fbb/src/result.ts#L3)
->>>>>>> 090c7aa (update)
+[result.ts:3](https://github.com/osins/osins-utils/blob/89f487e/src/result.ts#L3)
 
 ___
 
@@ -67,8 +55,4 @@ ___
 
 #### Defined in
 
-<<<<<<< HEAD
-[result.ts:2](https://github.com/osins/osins-utils/blob/b1b8065/src/result.ts#L2)
-=======
-[result.ts:2](https://github.com/osins/osins-utils/blob/de67fbb/src/result.ts#L2)
->>>>>>> 090c7aa (update)
+[result.ts:2](https://github.com/osins/osins-utils/blob/89f487e/src/result.ts#L2)
